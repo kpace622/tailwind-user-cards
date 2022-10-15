@@ -9,6 +9,7 @@ function App() {
   useEffect(() => {
     axios.get('https://api.github.com/users/kpace622/followers')
     .then(res => {
+      console.log(res.data)
       setUserData(res.data)
     })
   }, [])
