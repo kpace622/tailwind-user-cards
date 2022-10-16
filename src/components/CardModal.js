@@ -1,16 +1,4 @@
-import { useEffect, useState } from "react";
-import axios from 'axios';
-
 const CardModal = (props) => {
-  const [userInfo, setUserInfo] = useState();
-
-  // useEffect(() => {
-  //   axios.get(`https://api.github.com/users/${props.userUrl}`)
-  //   .then(res => {
-  //     console.log(res)
-  //     setUserInfo(res)
-  //   })
-  // }, [])
 
   const closeModal = (e) => {
     props.onClose && props.onClose(e);
@@ -24,7 +12,6 @@ const CardModal = (props) => {
         
         <div className='content flex flex-col items-center'>
           <img className='py-4 px-4' src={props.userUrl.avatar_url}/>
-          {/* <h3>{props.userUrl.login}</h3> */}
         </div>
         <div className='actions flex justify-center'>
           <button className='toggle-button' onClick={closeModal}>Close</button>
